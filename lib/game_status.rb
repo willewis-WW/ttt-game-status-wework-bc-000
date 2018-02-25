@@ -17,28 +17,6 @@ WIN_COMBINATIONS = [
   ]
 
 
-=begin
-def won?(board)
-  
-  if board.all?{|position| position == ' '}
-    return false
-  elsif board.all?{|position| position != ' '}
-    return false
-  else
-  WIN_COMBINATIONS.each do |combo|
-    first_position = board[combo[0]]
-    second_position = board[combo[1]]
-    third_position = board[combo[2]]
-    
-    if first_position == second_position && second_position == third_position
-      return combo
-    end
-  end
-  end
-end
-=end
-
-
 
 def won?(board)
   WIN_COMBINATIONS.detect do |combo|
